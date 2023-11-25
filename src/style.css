@@ -1,0 +1,27 @@
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+button{
+  background: black;
+  color: white;
+  border-radius: 4px;
+  padding: 4px 12px;
+  border: none;
+  margin: 8px;
+}
+input{
+  padding: 4px 12px;
+  margin: 8px;
+  border: none;
+  border-bottom: 1px solid blue;
+}
+ul{
+  padding: 0;
+}
+ul li{
+  list-style: none;
+  margin: 8px;
+  background-color: #43aeff;
+  padding: 8px 16px;
+  border-radius: 4px;
+}

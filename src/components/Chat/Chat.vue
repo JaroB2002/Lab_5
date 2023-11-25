@@ -1,18 +1,17 @@
 <script setup>
-    // import ref
-    import { ref, reactive, onMounted } from 'vue'
-
-    let message = ref('') // int, string, boolean
+    //import ref, reactive and onMounted from 'vue';
+    import { ref, reactive, onMounted } from 'vue';
+    //ref -> iets reflecteren naar de frontend
+    let message =ref("");//int, string, boolean
     let allMessages = reactive({
-        data: ["Heel", "Even", "Simpel", "Doen"],
-    });
+        data: ["message 1", "message 2", "message 3"],
+    });//array, object
 
-    // function sendMessage
+    //function sendMessage
     const sendMessage = () => {
-        allMessages.data.push(message.value)
-        message.value = '' // value van de reflective variabele
+        allMessages.data.push(message.value);
+        message.value = "";
     }
-
 </script>
 
 <template>
@@ -20,14 +19,13 @@
     <ul>
         <li v-for="m in allMessages.data">{{ m }}</li>
     </ul>
-
-    <div>
-        <input v-model="message" type="text" placeholder="type your message here">
-        <button @click="sendMessage">Send</button>
-    </div>
   </div>
+  <div>
+        <input v-model="message" type="text" placeholder="Type your message here">
+        <button @click="sendMessage">Send</button>
+   </div>
 </template>
 
-<style>
+<style scoped>
 
 </style>

@@ -1,15 +1,15 @@
 <script setup>
-    // define props = properties
-    const props = defineProps(['description'])
+    //define props
+    const props = defineProps(['description']);
 </script>
 
 <template>
-  <div>
-    <h3>Username</h3>
-    <p>{{description}}</p>
-  </div>
+    <div>
+        <h3>Username</h3>
+        <p>{{ description }}</p>
+    </div>
 </template>
 
-<style>
+<style scoped>
 
 </style>
