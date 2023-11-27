@@ -43,7 +43,7 @@
 <template>
   <div>
     <ul>
-        <li v-for="m in allMessages.data.reverse()" :key="m.id">
+        <li v-for="m in allMessages.data" :key="m.id">
         {{ m.text }}
       </li>
     </ul>
