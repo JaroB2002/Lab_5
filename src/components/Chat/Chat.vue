@@ -41,7 +41,7 @@
 <template>
   <div>
     <ul>
-        <li v-for="m in allMessages.data">{{ m.text }}</li>
+        <li v-for="m in allMessages.data" :key="m.id">{{ m.text }}</li>
     </ul>
   </div>
   <div>
