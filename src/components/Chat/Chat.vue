@@ -16,6 +16,26 @@
         console.error(error);
     }
 });
+
+    const sendMessage = async () => {
+        try {
+            const response = await fetch("https://lab5-p379.onrender.com/api/v1/messages/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    text: message.value,
+                }),
+            });
+            if(response.ok){
+            const data = await response.json();
+            allMessages.data.push(data);
+            message.value = "";
+        }} catch (error) {
+            console.error(error);
+        }
+    };
 </script>
 
 <template>
