@@ -13,15 +13,11 @@ onMounted(() => {
     fetch("https://api.jsonbin.io/v3/b/6548ef9954105e766fcc2c15")
     .then((res) => res.json())
     .then((data) => {
-        console.log('API response:', data);
         videos.data = data.record.videos;
         videoUrl.value = videos.data[0].video;
 
         //emit event
         emit('update:videoDescription', videos.data[0].description);
-        
-            console.log('videos.data:', videos.data);
-            console.log('videoUrl:', videoUrl.value);
     });
 })
 </script>
