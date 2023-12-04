@@ -23,7 +23,9 @@ const sendMessage = async () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ text: message.value }),
+            body: JSON.stringify({ text: message.value, user: 'Jaro Brichau'}),
+
+            
         });
 
         if (response.ok) {
